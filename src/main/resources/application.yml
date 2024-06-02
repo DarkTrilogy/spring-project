@@ -1,0 +1,75 @@
+db:
+  username: ${username.value:postgres}
+  password: pass
+  driver: PostgresDriver
+  url: postgres:5432
+  hosts: localhost,127.0.0.1
+  properties:
+    first: 123
+    second: 567
+    third.value: Third
+  pool:
+    size: 12
+    timeout: 10
+  pools:
+    - size: 1
+      timeout: 1
+    - size: 2
+      timeout: 2
+    - size: 3
+      timeout: 3
+
+spring.profiles.active: qa
+
+app.common.logging:
+  enabled: true
+  level: INFO
+
+logging:
+  level:
+    root: INFO
+    com.abii.spring.database.pool: INFO
+    org.springframework.jdbc.core: TRACE
+  file:
+    name: abii.log
+    path: /
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+    format:
+      date: iso
+  datasource:
+    url: jdbc:postgresql://localhost:5433/postgres
+    username: postgres
+    password: pass
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    properties:
+      hibernate:
+        batch_size: 50
+        fetch_size: 50
+        show_sql: true
+        format_sql: true
+        hbm2ddl:
+          auto: validate
+    open-in-view: false
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            clientId: 165274677809-b0mogf1vsitlko5odusuv1184fqmsqt0.apps.googleusercontent.com
+            clientSecret: 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
+            redirectUri: http://localhost:8080/login/oauth2/code/google
+            scope: openid,email,profile
+  messages:
+    basename: messages
+springdoc:
+  swagger-ui:
+    oauth:
+      client-id: 165274677809-b0mogf1vsitlko5odusuv1184fqmsqt0.apps.googleusercontent.com
+      client-secret: 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
+      scopes: openid,email,profile
+    oauth2-redirect-url: http://localhost:8080/swagger-ui/oauth2-redirect.html

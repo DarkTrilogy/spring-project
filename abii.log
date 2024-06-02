@@ -1,0 +1,8 @@
+2023-09-11 18:20:00.644  INFO 21152 --- [main] c.a.spring.database.pool.ConnectionPool  : Init connection pool
+2023-09-11 18:20:00.664  INFO 21152 --- [main] c.a.spring.database.pool.ConnectionPool  : Init connection pool
+2023-09-11 18:20:00.666  INFO 21152 --- [main] c.a.spring.database.pool.ConnectionPool  : Init connection pool
+2023-09-11 18:20:00.672  WARN 21152 --- [main] c.a.s.d.repository.CompanyRepository     : init company repository
+2023-09-11 18:20:00.679  WARN 21152 --- [main] c.a.s.d.repository.CompanyRepository     : init company repository
+2023-09-11 18:20:00.766  INFO 21152 --- [SpringApplicationShutdownHook] c.a.spring.database.pool.ConnectionPool  : Clean connection pool
+2023-09-11 18:20:00.766  INFO 21152 --- [SpringApplicationShutdownHook] c.a.spring.database.pool.ConnectionPool  : Clean connection pool
+2023-09-11 18:20:00.774  INFO 21152 --- [SpringApplicationShutdownHook] c.a.spring.database.pool.ConnectionPool  : Clean connection pool

@@ -1,0 +1,4 @@
+rootProject.name = 'spring-stater'
+
+include 'common-logging-starter'
+
