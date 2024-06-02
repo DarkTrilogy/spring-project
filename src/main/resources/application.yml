@@ -60,16 +60,16 @@ spring:
       client:
         registration:
           google:
-            clientId: 165274677809-b0mogf1vsitlko5odusuv1184fqmsqt0.apps.googleusercontent.com
-            clientSecret: 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
-            redirectUri: http://localhost:8080/login/oauth2/code/google
+            clientId: ${CLIENT_ID}
+            clientSecret: ${GOOGLE_SECRET}
+            redirectUri: ${REDIRECT_URI}
             scope: openid,email,profile
   messages:
     basename: messages
 springdoc:
   swagger-ui:
     oauth:
-      client-id: 165274677809-b0mogf1vsitlko5odusuv1184fqmsqt0.apps.googleusercontent.com
-      client-secret: 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
+      client-id: ${SWAGGER_CLIENT_ID}
+      client-secret: ${SWAGGER_SECRET}
       scopes: openid,email,profile
     oauth2-redirect-url: http://localhost:8080/swagger-ui/oauth2-redirect.html
